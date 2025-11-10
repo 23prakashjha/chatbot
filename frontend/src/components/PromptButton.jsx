@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default function PromptButton({ prompt }) {
   const handleClick = async () => {
-    const res = await axios.post('http://localhost:5000/api/chatbot/ask', { question: prompt });
+    const res = await axios.post('https://chatbot-sux9.onrender.com/api/chatbot/ask', { question: prompt });
     alert(`Chatbot: ${res.data.answer}`);
   };
 

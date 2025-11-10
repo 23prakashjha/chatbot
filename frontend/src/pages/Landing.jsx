@@ -241,7 +241,7 @@ export default function Landing() {
     setMessages((prev) => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chatbot/ask", {
+      const res = await axios.post("https://chatbot-sux9.onrender.com/api/chatbot/ask", {
         question: prompt,
       });
       const botMsg = { sender: "bot", text: res.data.answer };

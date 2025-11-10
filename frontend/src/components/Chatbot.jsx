@@ -14,7 +14,7 @@ export default function Chatbot({ name }) {
     setInput('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/chatbot/ask', {
+      const res = await axios.post('https://chatbot-sux9.onrender.com/api/chatbot/ask', {
         question: input,
       });
       const botMsg = { sender: 'bot', text: res.data.answer };
